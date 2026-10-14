@@ -1,0 +1,209 @@
+/* --- VARIABLES Y MODO CLARO/OSCURO --- */
+:root {
+    --bg-color: #ffffff;
+    --text-color: #222222;
+    --card-bg: #f9f9f9;
+    --border-color: #cccccc;
+    --primary-color: #0066cc;
+    --header-bg: #f1f1f1;
+}
+
+[data-theme="dark"] {
+    --bg-color: #1a1a1a;
+    --text-color: #f1f1f1;
+    --card-bg: #2a2a2a;
+    --border-color: #444444;
+    --primary-color: #4da6ff;
+    --header-bg: #222222;
+}
+
+/* --- ESTILOS GENERALES --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    padding: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Contenedor principal para simular la estructura de la maqueta */
+.portfolio-container {
+    max-width: 900px;
+    margin: 0 auto;
+    border: 2px solid var(--border-color);
+    padding: 20px;
+    background-color: var(--bg-color);
+}
+
+/* --- ENCABEZADO Y NAVEGACIÓN --- */
+header {
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Botón de cambio de tema */
+.theme-toggle {
+    background: none;
+    border: 1px solid var(--border-color);
+    padding: 5px 10px;
+    cursor: pointer;
+    color: var(--text-color);
+    border-radius: 4px;
+}
+
+/* --- DISEÑO DE CONTENIDO (FLEXBOX PARA ESCRITORIO) --- */
+.main-layout {
+    display: flex;
+    gap: 20px;
+}
+
+/* Columna izquierda (similar al mockup móvil / barra lateral) */
+.sidebar-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Columna derecha (contenido principal) */
+.content-column {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* --- TARJETAS Y SECCIONES --- */
+section, .card {
+    border: 1px solid var(--border-color);
+    padding: 15px;
+    background-color: var(--card-bg);
+    border-radius: 6px;
+}
+
+h2 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 5px;
+}
+
+/* Listas de proyectos y educación */
+ul.project-list, ul.courses-list {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+/* Reseñas de maestros en cuadrícula */
+.reviews-grid {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+}
+
+.review-box {
+    border: 1px solid var(--border-color);
+    padding: 10px;
+    min-width: 200px;
+    border-radius: 8px;
+    background-color: var(--bg-color);
+}
+/* Botón de modo oscuro */
+.modo-tema {
+display: inline-flex;
+align-items: center;
+gap: 10px;
+cursor: pointer;
+}
+
+/* Ocultar checkbox original */
+.modo-tema input {
+display: none;
+}
+
+/* Interruptor */
+.interruptor {
+width: 45px;
+height: 24px;
+background-color: #ccc;
+border-radius: 20px;
+position: relative;
+transition: 0.3s;
+}
+
+/* Círculo del interruptor */
+.interruptor::before {
+content: “”;
+position: absolute;
+width: 18px;
+height: 18px;
+left: 3px;
+top: 3px;
+background-color: white;
+border-radius: 50%;
+transition: 0.3s;
+}
+
+/* Activado */
+.modo-tema input:checked + .interruptor {
+background-color: #212529;
+}
+
+.modo-tema input:checked + .interruptor::before {
+transform: translateX(21px);
+}
+
+.texto-modo {
+font-size: 14px;
+}
+
+/* --- PIE DE PÁGINA --- */
+footer {
+    text-align: center;
+    margin-top: 30px;
+    border-top: 2px solid var(--border-color);
+    padding-top: 15px;
+    font-size: 0.9rem;
+}
+
+/* --- MEDIA QUERIES PARA RESPONSIVIDAD --- */
+@media (max-width: 768px) {
+    .main-layout {
+        flex-direction: column;
+    }
+    
+    .reviews-grid {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description"
+        content="Contacto de Marcos Alejandro García Bravo, estudiante de Análisis y Desarrollo de Software">
+    <meta name="keywords" content="contacto, hoja de vida, estudiante ADSO, desarrollo de software">
+    <meta name="author" content="Marcos Alejandro García Bravo">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Contacto - Marcos Alejandro García Bravo">
+    <meta property="og:description" content="Formulario de contacto para oportunidades académicas y laborales.">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="./img/favicon.ico.jpg">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Archivo CSS -->
+    <link rel="stylesheet" href="css/estilo.css">
+
+    <title>Contacto - Marcos Alejandro García Bravo</title>
+</head>
+
+<body>
+    <header class="encabezado">
+        <h1>Contacto</h1>
+        <nav class="navegacion">
+            <ul class="lista-navegacion">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="proyecto.html">Proyectos</a></li>
+                <li><a href="articulos.html">Artículos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="contenido-principal">
+        <section class="seccion-contacto">
+            <h2>Comunícate conmigo</h2>
+            <p> Si deseas contactarme por una oportunidad laboral, académica o relacionada con mis proyectos, puedes
+                completar el siguiente formulario. </p>
+            <form class="formulario-contacto">
+                <div class="campo-formulario"> <label for="nombre">Nombre:</label> <input type="text" id="nombre"
+                        name="nombre" required> </div> <br>
+                <div class="campo-formulario"> <label for="correo">Correo:</label> <input type="email" id="correo"
+                        name="correo" required> </div> <br>
+                <div class="campo-formulario"> <label for="asunto">Asunto:</label> <input type="text" id="asunto"
+                        name="asunto" required> </div> <br>
+                <div class="campo-formulario"> <label for="mensaje">Mensaje:</label> <textarea id="mensaje"
+                        name="mensaje" rows="6" cols="40" required></textarea> </div> <br> <button type="submit"
+                    class="boton-enviar"> Enviar mensaje </button>
+            </form>
+        </section>
+    </main>
+    <label class="modo-tema">
+    <input type="checkbox" id="modo-oscuro">
+    <span class="interruptor"></span>
+    <span class="texto-modo">Modo oscuro</span>
+</label>
+    <footer class="pie-pagina">
+        <p>&copy; 2026 Marcos Alejandro García Bravo</p>
+    </footer>
+
+   
+</body>
+
+</html>
